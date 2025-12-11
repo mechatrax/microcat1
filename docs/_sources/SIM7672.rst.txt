@@ -1,0 +1,16 @@
+class SIM7672
+===========
+.. automodule:: SIM7672
+   :members:
+   :show-inheritance:
+   :special-members: __init__
+
+Constants
+=========
+
+.. autodata:: SIM7672.SEC_NONE
+
+.. autodata:: SIM7672.SEC_PAP
+
+.. autodata:: SIM7672.SEC_CHAP
+
