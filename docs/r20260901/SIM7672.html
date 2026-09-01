@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>module SIM7672 &mdash; MicroCat.1  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="module microcat1" href="microcat1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MicroCat.1
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="microcat1.html">module microcat1</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">module SIM7672</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#SIM7672.modem"><code class="docutils literal notranslate"><span class="pre">modem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.modem.__init__"><code class="docutils literal notranslate"><span class="pre">modem.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.modem.active"><code class="docutils literal notranslate"><span class="pre">modem.active()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.modem.config"><code class="docutils literal notranslate"><span class="pre">modem.config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.modem.connect"><code class="docutils literal notranslate"><span class="pre">modem.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.modem.disconnect"><code class="docutils literal notranslate"><span class="pre">modem.disconnect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.modem.ifconfig"><code class="docutils literal notranslate"><span class="pre">modem.ifconfig()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.modem.isconnected"><code class="docutils literal notranslate"><span class="pre">modem.isconnected()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.modem.status"><code class="docutils literal notranslate"><span class="pre">modem.status()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#constants">Constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.SEC_NONE"><code class="docutils literal notranslate"><span class="pre">SEC_NONE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.SEC_PAP"><code class="docutils literal notranslate"><span class="pre">SEC_PAP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.SEC_CHAP"><code class="docutils literal notranslate"><span class="pre">SEC_CHAP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.PDP_IP"><code class="docutils literal notranslate"><span class="pre">PDP_IP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.PDP_IPV6"><code class="docutils literal notranslate"><span class="pre">PDP_IPV6</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.PDP_IPV4V6"><code class="docutils literal notranslate"><span class="pre">PDP_IPV4V6</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#SIM7672.PDP_NONIP"><code class="docutils literal notranslate"><span class="pre">PDP_NONIP</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MicroCat.1</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">module SIM7672</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/SIM7672.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-sim7672">
+<h1>module SIM7672<a class="headerlink" href="#module-sim7672" title="Link to this heading"></a></h1>
+<p id="module-SIM7672">This module provides the <a class="reference internal" href="#SIM7672.modem" title="SIM7672.modem"><code class="xref py py-class docutils literal notranslate"><span class="pre">modem</span></code></a> class for the SIM7672 LTE modem
+on MicroCat.1. It manages power control, network registration, and a PPP
+session over UART, providing internet connectivity over a cellular
+network using a SIM card.</p>
+<p>The <a class="reference internal" href="#SIM7672.modem" title="SIM7672.modem"><code class="xref py py-class docutils literal notranslate"><span class="pre">modem</span></code></a> class is not normally instantiated directly — use
+<a class="reference internal" href="microcat1.html#microcat1.modem" title="microcat1.modem"><code class="xref py py-func docutils literal notranslate"><span class="pre">microcat1.modem()</span></code></a> instead.</p>
+<p>Recommended usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">microcat1</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">microcat1</span><span class="o">.</span><span class="n">modem</span><span class="p">()</span>
+<span class="n">m</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;your_apn&#39;</span><span class="p">,</span> <span class="s1">&#39;your_apn_username&#39;</span><span class="p">,</span> <span class="s1">&#39;your_apn_password&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
+<span class="n">m</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="SIM7672.modem">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">SIM7672.</span></span><span class="sig-name descname"><span class="pre">modem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">machine.UART</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baudrate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">115200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handshake</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">led</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">machine.Pin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SIM7672.modem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Control the SIM7672 LTE modem on MicroCat.1.</p>
+<p>Manages the full lifecycle of a cellular connection: power on/off,
+network registration, and PPP session establishment over UART.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="SIM7672.modem.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">machine.UART</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baudrate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">115200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handshake</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">led</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">machine.Pin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SIM7672.modem.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize the modem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uart</strong> – UART instance for communication (default: UART(1))</p></li>
+<li><p><strong>baudrate</strong> – Baud rate for UART communication (default: 115200)</p></li>
+<li><p><strong>handshake</strong> – Enable hardware handshake (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+<li><p><strong>led</strong> – LED pin for modem status indication (default: Pin(34))</p></li>
+<li><p><strong>debug</strong> – Enable debug output (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SIM7672.modem.active">
+<span class="sig-name descname"><span class="pre">active</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">activate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SIM7672.modem.active" title="Link to this definition"></a></dt>
+<dd><p>Control or query the modem’s power state.</p>
+<p>Returns the current state if no argument is provided.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>activate</strong> – <code class="docutils literal notranslate"><span class="pre">True</span></code> to power on, <code class="docutils literal notranslate"><span class="pre">False</span></code> to power off</p></li>
+<li><p><strong>reset</strong> – Reset modem if powering on and already active (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if modem is active, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SIM7672.modem.config">
+<span class="sig-name descname"><span class="pre">config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">security</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SIM7672.modem.config" title="Link to this definition"></a></dt>
+<dd><p>Get or set modem parameters.</p>
+<p>For querying, parameters name should be quoted as a <code class="docutils literal notranslate"><span class="pre">str</span></code>, and only one parameter can be queries at time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param</strong> – Specific parameter to get (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>apn</strong> – Access Point Name (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>user</strong> – Username for authentication (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>key</strong> – Password for authentication (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>pdp</strong> – PDP type (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>security</strong> – Security type (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value of specified parameter if param is given, otherwise <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SIM7672.modem.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">security</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detach</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transition_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SIM7672.modem.connect" title="Link to this definition"></a></dt>
+<dd><p>Connect to the cellular network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>apn</strong> – Access Point Name (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>user</strong> – Username for authentication (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>key</strong> – Password for authentication (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>pdp</strong> – PDP type (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>security</strong> – Security type (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li><p><strong>detach</strong> – Detach before connecting (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>)</p></li>
+<li><p><strong>retries</strong> – Number of connection attempts (default: 60)</p></li>
+<li><p><strong>delay</strong> – Delay between attempts in milliseconds (default: 500)</p></li>
+<li><p><strong>transition_timeout</strong> – Maximum wait time for state transition in milliseconds (default: 10000)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SIM7672.modem.disconnect">
+<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transition_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SIM7672.modem.disconnect" title="Link to this definition"></a></dt>
+<dd><p>Disconnect from the cellular network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>retries</strong> – Number of disconnection attempts (default: 2)</p></li>
+<li><p><strong>delay</strong> – Delay between attempts in milliseconds (default: 10000)</p></li>
+<li><p><strong>transition_timeout</strong> – Maximum wait time for state transition in milliseconds (default: 20000)</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Stable connection pattern</strong></p>
+<p>Call <a class="reference internal" href="#SIM7672.modem.connect" title="SIM7672.modem.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect()</span></code></a> before each request and <a class="reference internal" href="#SIM7672.modem.disconnect" title="SIM7672.modem.disconnect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">disconnect()</span></code></a> immediately after.
+On failure, call <code class="docutils literal notranslate"><span class="pre">machine.reset()</span></code> — this is the only reliable recovery method
+(<a class="reference internal" href="#SIM7672.modem.disconnect" title="SIM7672.modem.disconnect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">disconnect()</span></code></a>/<a class="reference internal" href="#SIM7672.modem.connect" title="SIM7672.modem.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect()</span></code></a> alone does not recover a wedged PPP stack).
+After reset, allow a few seconds for the modem to warm up before the first
+<a class="reference internal" href="#SIM7672.modem.connect" title="SIM7672.modem.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect()</span></code></a> call to avoid a false <code class="docutils literal notranslate"><span class="pre">0.0.0.0</span></code> result triggering another reset.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SIM7672.modem.ifconfig">
+<span class="sig-name descname"><span class="pre">ifconfig</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SIM7672.modem.ifconfig" title="Link to this definition"></a></dt>
+<dd><p>Get network interface configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Network configuration tuple (ip, subnet, gateway, dns)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SIM7672.modem.isconnected">
+<span class="sig-name descname"><span class="pre">isconnected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SIM7672.modem.isconnected" title="Link to this definition"></a></dt>
+<dd><p>Check if the PPP session is established.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the PPP session is established, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This reflects the PPP session state, not end-to-end network reachability.
+The PDP context can be terminated by the carrier while the PPP session remains alive;
+in that case this method returns <code class="docutils literal notranslate"><span class="pre">True</span></code> but data transfer will fail
+(e.g., <code class="docutils literal notranslate"><span class="pre">OSError</span></code> <code class="docutils literal notranslate"><span class="pre">ECONNABORTED</span></code> or <code class="docutils literal notranslate"><span class="pre">EHOSTUNREACH</span></code>).</p>
+<p>To detect this state, check <a class="reference internal" href="#SIM7672.modem.ifconfig" title="SIM7672.modem.ifconfig"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ifconfig()</span></code></a> — if it returns <code class="docutils literal notranslate"><span class="pre">('0.0.0.0',</span> <span class="pre">...)</span></code>,
+the IP stack is no longer functional.
+Recovery via <a class="reference internal" href="#SIM7672.modem.disconnect" title="SIM7672.modem.disconnect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">disconnect()</span></code></a>/<a class="reference internal" href="#SIM7672.modem.connect" title="SIM7672.modem.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect()</span></code></a> alone is not reliable;
+call <code class="docutils literal notranslate"><span class="pre">machine.reset()</span></code> to recover from a clean boot sequence.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SIM7672.modem.status">
+<span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SIM7672.modem.status" title="Link to this definition"></a></dt>
+<dd><p>Get PPP connection status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PPP connection status</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="SIM7672.SEC_NONE">
+<span class="sig-prename descclassname"><span class="pre">SIM7672.</span></span><span class="sig-name descname"><span class="pre">SEC_NONE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#SIM7672.SEC_NONE" title="Link to this definition"></a></dt>
+<dd><p>No authentication (alias of <code class="xref py py-data docutils literal notranslate"><span class="pre">network.PPP.SEC_NONE</span></code>).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SIM7672.SEC_PAP">
+<span class="sig-prename descclassname"><span class="pre">SIM7672.</span></span><span class="sig-name descname"><span class="pre">SEC_PAP</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#SIM7672.SEC_PAP" title="Link to this definition"></a></dt>
+<dd><p>PAP authentication (alias of <code class="xref py py-data docutils literal notranslate"><span class="pre">network.PPP.SEC_PAP</span></code>).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SIM7672.SEC_CHAP">
+<span class="sig-prename descclassname"><span class="pre">SIM7672.</span></span><span class="sig-name descname"><span class="pre">SEC_CHAP</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#SIM7672.SEC_CHAP" title="Link to this definition"></a></dt>
+<dd><p>CHAP authentication (alias of <code class="xref py py-data docutils literal notranslate"><span class="pre">network.PPP.SEC_CHAP</span></code>).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SIM7672.PDP_IP">
+<span class="sig-prename descclassname"><span class="pre">SIM7672.</span></span><span class="sig-name descname"><span class="pre">PDP_IP</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'IP'</span></span><a class="headerlink" href="#SIM7672.PDP_IP" title="Link to this definition"></a></dt>
+<dd><p>IPv4 PDP context type (<code class="docutils literal notranslate"><span class="pre">'IP'</span></code>).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SIM7672.PDP_IPV6">
+<span class="sig-prename descclassname"><span class="pre">SIM7672.</span></span><span class="sig-name descname"><span class="pre">PDP_IPV6</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'IPV6'</span></span><a class="headerlink" href="#SIM7672.PDP_IPV6" title="Link to this definition"></a></dt>
+<dd><p>IPv6 PDP context type (<code class="docutils literal notranslate"><span class="pre">'IPV6'</span></code>).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SIM7672.PDP_IPV4V6">
+<span class="sig-prename descclassname"><span class="pre">SIM7672.</span></span><span class="sig-name descname"><span class="pre">PDP_IPV4V6</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'IPV4V6'</span></span><a class="headerlink" href="#SIM7672.PDP_IPV4V6" title="Link to this definition"></a></dt>
+<dd><p>Dual-stack IPv4/IPv6 PDP context type (<code class="docutils literal notranslate"><span class="pre">'IPV4V6'</span></code>).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="SIM7672.PDP_NONIP">
+<span class="sig-prename descclassname"><span class="pre">SIM7672.</span></span><span class="sig-name descname"><span class="pre">PDP_NONIP</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Non-IP'</span></span><a class="headerlink" href="#SIM7672.PDP_NONIP" title="Link to this definition"></a></dt>
+<dd><p>Non-IP PDP context type (<code class="docutils literal notranslate"><span class="pre">'Non-IP'</span></code>).</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="microcat1.html" class="btn btn-neutral float-left" title="module microcat1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
