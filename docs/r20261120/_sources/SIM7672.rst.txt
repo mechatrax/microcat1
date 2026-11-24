@@ -1,0 +1,25 @@
+module SIM7672
+=============
+.. automodule:: SIM7672
+   :members:
+   :show-inheritance:
+   :special-members: __init__
+   :exclude-members: SEC_NONE, SEC_PAP, SEC_CHAP, PDP_IP, PDP_IPV6, PDP_IPV4V6, PDP_NONIP
+
+Constants
+---------
+
+.. autodata:: SIM7672.SEC_NONE
+
+.. autodata:: SIM7672.SEC_PAP
+
+.. autodata:: SIM7672.SEC_CHAP
+
+.. autodata:: SIM7672.PDP_IP
+
+.. autodata:: SIM7672.PDP_IPV6
+
+.. autodata:: SIM7672.PDP_IPV4V6
+
+.. autodata:: SIM7672.PDP_NONIP
+
